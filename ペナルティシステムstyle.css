@@ -1,0 +1,172 @@
+#return{
+        display:block;
+        margin-top:2px ;
+        margin-left: auto;
+        margin-right: auto;
+        width:50px;
+        height: 25px;
+    }
+    #log-display{
+        position: absolute;
+        display:none;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width:90%;
+        height:600px;
+        background-color: rgb(230, 123, 123);
+        z-index: 1000;
+    }
+    #log{
+        position: absolute;
+        display:flex;
+        top:52%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width:80%;
+        height:550px;
+        background-color: rgb(255, 255, 255);
+        z-index: 1000;
+        word-break: normal;
+        font-size: 12px;
+    }
+    #edit-display{
+        position:absolute;
+        display: none;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        height: 500px;
+        background-color: rgb(255, 122, 122);
+        z-index: 100;
+        align-items: center;
+        justify-content: center;
+    }
+    #edit-title{
+        display:block;
+        margin-top:100px ;
+        margin-left: auto;
+        margin-right: auto;
+        width:80%;
+        height: 10%;
+        background-color: none;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 900;
+    }
+    #select-players{
+        display:block;
+        margin-top:5px ;
+        margin-left: auto;
+        margin-right: auto;
+        width:80%;
+        height: 10%;
+    }
+    #select-reasons{
+        display:block;
+        margin-top:2px ;
+        margin-left: auto;
+        margin-right: auto;
+        width:80%;
+        height: 10%;
+    }
+    #other-reasons{
+        display:block;
+        margin-top:2px ;
+        margin-left: auto;
+        margin-right: auto;
+        width:77%;
+        height: 10%;
+    }
+    #select-penas{
+        display:block;
+        margin-top:2px ;
+        margin-left: auto;
+        margin-right: auto;
+        width:80%;
+        height: 10%;
+    }
+    #change{
+        display:block;
+        margin-top:2px ;
+        margin-left: auto;
+        margin-right: auto;
+        width:30%;
+        height: 10%;
+    }
+
+    #main{
+        position: relative;
+        display:flex;
+        margin-top:-20%;
+        margin-left: auto;
+        margin-right: auto;
+        width:90%;
+        height:850px;
+        background-color: grey;
+        
+        
+        
+
+
+    }
+    #players{
+        position: absolute;
+        top: 50%;
+        left:25%;
+        transform: translate(-50%,-50%);
+        width:45%;
+        height: 80%;
+        background-color: white;
+        display: block;
+        
+    }
+    #numbers{
+        position: absolute;
+        top: 50%;
+        left:75%;
+        transform: translate(-50%,-50%);
+        width:45%;
+        height: 80%;
+        background-color: white;
+        display: block;
+        
+    }
+    .names{
+        display:block;
+        margin-top:2px;
+        margin-left: auto;
+        margin-right: auto;
+        width:90%;
+        height: 25px;
+        background-color: bisque;
+        border: 1px rgb(169, 155, 155) solid;
+    }
+    .nums{
+        display:block;
+        margin-top:2px;
+        margin-left: auto;
+        margin-right: auto;
+        width:90%;
+        height: 25px;
+        background-color: bisque;
+        border: 1px rgb(169, 155, 155) solid;
+    }
+        #edit{
+            width: 100px;
+            height: 70px;
+            position: absolute;
+            top: 95%;
+            left:80%;
+            transform: translate(-50%,-50%);
+        }
+        #go-log{
+            width: 100px;
+            height: 70px;
+            position: absolute;
+            top: 95%;
+            left:20%;
+            transform: translate(-50%,-50%);
+        }
+

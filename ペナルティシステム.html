@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ペナルティシステム</title>
+    <link rel="stylesheet" href="C:\Users\manato\Documents\席替スイッチサーバー\ペナルティシステムstyle.css">
+  </head>
+  <div id="edit-display">
+    <div id="edit-title">EDIT</div>
+    <select name="players" id="select-players">
+        <option value="none">選択</option>
+        <option value="n1">名前1</option>
+        <option value="n2">名前2</option>
+        <option value="n3">名前3</option>
+        <option value="n4">名前4</option>
+        <option value="n5">名前5</option>
+        <option value="n6">名前6</option>
+        <option value="n7">名前7</option>
+        <option value="n8">名前8</option>
+        <option value="n9">名前9</option>
+        <option value="n10">名前10</option>
+        <option value="n12">名前12</option>
+        <option value="n13">名前13</option>
+        <option value="n14">名前14</option>
+        <option value="n15">名前15</option>
+        <option value="n16">名前16</option>
+        <option value="n17">名前17</option>
+        <option value="n18">名前18</option>
+        <option value="n19">名前19</option>
+        <option value="n20">名前20</option>
+        <option value="n21">名前21</option>
+        <option value="n22">名前22</option>
+    </select>
+    <select name="reasons" id="select-reasons">
+        <option value="理由">理由</option>
+        <option value="取り消し">取り消し</option>
+        <option value="体調">体調</option>
+        <option value="疲労">疲労</option>
+        <option value="遅刻">遅刻</option>
+        <option value="無断欠席">無断遅刻</option>
+        <option value="欠席">欠席</option>
+        <option value="無断欠席">無断欠席</option>
+        <option value="その他">その他</option>
+    </select>
+    <input type="text" id="other-reasons" placeholder="その他の理由">
+    <select name="pena" id="select-penas">
+        <option value="0">選択</option>
+        <option value="-5">-5</option>
+        <option value="-4">-4</option>
+        <option value="-3">-3</option>
+        <option value="-2">-2</option>
+        <option value="-1">-1</option>
+        <option value="+1">+1</option>
+        <option value="+2">+2</option>
+        <option value="+3">+3</option>
+        <option value="+4">+4</option>
+        <option value="+5">+5</option>
+    </select>
+    <button id="change" onclick="change()">CHANGE</button>
+  </div>
+  <div id="main">
+    <div id="players">
+        <div class="names"  id="p0">name</div>
+        <div class="names"  id="p1">名前1</div>
+        <div class="names"  id="p2">名前2</div>
+        <div class="names"  id="p3">名前3</div>
+        <div class="names"  id="p4">名前4</div>
+        <div class="names"  id="p5">名前5</div>
+        <div class="names"  id="p6">名前6</div>
+        <div class="names"  id="p7">名前7</div>
+        <div class="names"  id="p8">名前8</div>
+        <div class="names"  id="p9">名前9</div>
+        <div class="names"  id="p10">名前10</div>
+        <div class="names"  id="p11">名前11</div>
+        <div class="names"  id="p12">名前12</div>
+        <div class="names"  id="p13">名前13</div>
+        <div class="names"  id="p14">名前14</div>
+        <div class="names"  id="p15">名前15</div>
+        <div class="names"  id="p16">名前16</div>
+        <div class="names"  id="p17">名前17</div>
+        <div class="names"  id="p18">名前18</div>
+        <div class="names"  id="p19">名前19</div>
+        <div class="names"  id="p20">名前20</div>
+        <div class="names"  id="p21">名前21</div>
+        <div class="names"  id="p22">名前22</div>
+        
+    </div>
+    <div id="numbers">
+        <div class="nums" id="n0">ペナルティの数</div>
+        <div class="nums" id="n1">0</div>
+        <div class="nums" id="n2">0</div>
+        <div class="nums" id="n3">0</div>
+        <div class="nums" id="n4">0</div>
+        <div class="nums" id="n5">0</div>
+        <div class="nums" id="n6">0</div>
+        <div class="nums" id="n7">0</div>
+        <div class="nums" id="n8">0</div>
+        <div class="nums" id="n9">0</div>
+        <div class="nums" id="n10">0</div>
+        <div class="nums" id="n11">0</div>
+        <div class="nums" id="n12">0</div>
+        <div class="nums" id="n13">0</div>
+        <div class="nums" id="n14">0</div>
+        <div class="nums" id="n15">0</div>
+        <div class="nums" id="n16">0</div>
+        <div class="nums" id="n17">0</div>
+        <div class="nums" id="n18">10</div>
+        <div class="nums" id="n19">10</div>
+        <div class="nums" id="n20">10</div>
+        <div class="nums" id="n21">8</div>
+        <div class="nums" id="n22">0</div>
+
+    </div>
+    
+<button id="edit" onclick="edit();">EDIT</button>
+<button id="go-log" onclick="go_log()">ログ</button>
+  </div>
+  <div id="log-display">
+    <button id="return" onclick="back()">戻る</button>
+    <div id="log" >
+       <span><span id="lll"></span></span> 
+        
+    </div>
+  </div>
+  
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    
+//追加（firebasejs/以降のバージョンを合わせて書き換える）
+import { getFirestore, doc, collection, setDoc, addDoc, getDocs, updateDoc, deleteDoc, deleteField,serverTimestamp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore.js";
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDYaFPYJXXyZIDwSXos2OfjI8sp1hwxAX4",
+      authDomain: "tete-8f7c9.firebaseapp.com",
+      projectId: "tete-8f7c9",
+      storageBucket: "tete-8f7c9.appspot.com",
+      messagingSenderId: "820077320180",
+      appId: "1:820077320180:web:3e7e3002bbe8ef70784ba1"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    console.log(app);
+    const c=collection(db,"Users");
+    const q=await getDocs(c);
+    let array=[];
+    q.forEach((doc)=>{
+        array.push({...doc.data()})
+    })
+    let obj=array[0];
+    console.log(obj);
+
+    const c1=collection(db,"Logs");
+    const q1=await getDocs(c1);
+    let array1=[];
+    q1.forEach((doc)=>{
+        array1.push({...doc.data()})
+    })
+    let obj2=array1[0];
+    console.log(obj2); 
+    
+    
+     // console.log(docRef); 
+        
+      
+    load();
+        function load(){
+        for(let i=0;i<nums.length;i++){
+            let tar_id=nums[i];
+            let tar_num=obj[tar_id];
+            //console.log(tar_id,tar_num)ok
+            document.getElementById(tar_id).textContent=tar_num;
+            
+            
+        }
+        //log
+        let tar_log=obj2["log"];
+        console.log(tar_log);
+        document.getElementById("lll").textContent=tar_log;
+      }
+      
+      //
+    
+      const UserId="FAIh1S5251cJT7WKX62g";
+      const UserRef=doc(db,"Users",UserId);
+      const LogId="NGhN8HsWC07TPqIpNPge";
+      const docRef=doc(db,"Logs",LogId);
+      
+
+console.log(obj);
+setInterval(load1,1000);
+      function load1(){
+        updateDoc(docRef,{
+          log:document.getElementById("lll").textContent
+        })
+        //console.log(document.getElementById("lll").textContent)
+          updateDoc(UserRef,{
+            n1:document.getElementById("n1").textContent,
+            n2:document.getElementById("n2").textContent,
+            n3:document.getElementById("n3").textContent,
+            n4:document.getElementById("n4").textContent,
+            n5:document.getElementById("n5").textContent,
+            n6:document.getElementById("n6").textContent,
+            n7:document.getElementById("n7").textContent,
+            n8:document.getElementById("n8").textContent,
+            n9:document.getElementById("n9").textContent,
+            n10:document.getElementById("n10").textContent,
+            n11:document.getElementById("n11").textContent,
+            n12:document.getElementById("n12").textContent,
+            n13:document.getElementById("n13").textContent,
+            n14:document.getElementById("n14").textContent,
+            n15:document.getElementById("n15").textContent,
+            n16:document.getElementById("n16").textContent,
+            n17:document.getElementById("n17").textContent,
+            n18:document.getElementById("n18").textContent,
+            n19:document.getElementById("n19").textContent,
+            n20:document.getElementById("n20").textContent,
+            n21:document.getElementById("n21").textContent,
+
+          })
+          console.log(n1,document.getElementById("n1").textContent,);
+          //window.alert("aaaaa");
+          console.log("laod")
+      }
+     // event.stopPropagation();
+      //window.addEventListener("beforeunload",load1());
+    </script>
+  <script>
+    
+    nums=["n1","n2","n3","n4","n5","n6","n7","n8","n9","n10","n11","n12","n13","n14","n15","n16","n17","n18","n19","n20","n21","n22"];
+    let Users=["a","b","c","d","e","f","g"];
+    let User="No";
+    let login="No";
+    let UserName="none";
+
+    function edit(){
+        document.getElementById("edit-display").style.display="block"
+    }
+    function change(){
+        if(User=="Yes"){
+        let target_name=document.getElementById("select-players").value;//valueのほうが表示されている
+        let target_reason=document.getElementById("select-reasons").value;
+        let target_another=document.getElementById("other-reasons").value;
+        let target_pena=document.getElementById("select-penas").value;
+        console.log(target_name);
+        console.log(target_reason);
+        console.log(target_another);
+        console.log(target_pena)
+        if((target_name=="none"||target_reason=="理由")||(target_pena=="0")){
+            window.alert("選択してください");
+        }else if(target_reason=="その他"&&target_another==""){
+            window.alert("その他の理由を書いてください");
+        }else{
+            //全てが完璧なとき
+            //targetname
+            //after
+            
+
+            document.getElementById("edit-display").style.display="none";
+            target_pena=Number(target_pena);
+
+            let before=document.getElementById(target_name).textContent;
+            before=Number(before);
+            document.getElementById(target_name).textContent=before+target_pena;
+            let after=document.getElementById(target_name).textContent=before+target_pena;
+            //ログの表示画面
+            let log=document.getElementById("log").textContent;
+            let aaa=target_name.split("");
+            aaa[0]="p";
+            console.log(aaa);
+            let bbb=aaa.join("");
+            console.log(bbb)
+            let ccc=document.getElementById(bbb).textContent;
+            let p2_element = document.getElementById('p2_element');
+            let date=new Date();
+           let year= date.getFullYear(); //2021 (年)
+           let month= date.getMonth(); // 1 (月)
+           let day= date.getDate(); // 11 (日)
+           let hours= date.getHours(); // 11 (時)
+           let minutes= date.getMinutes(); // 30 (分)
+           let today=`${year}年${month}月${day}日${hours}時${minutes}分`;
+           //ここでストレージを書き換える
+           
+           
+
+           
+            if(target_reason=="その他"){
+                let new_element1 = document.createElement('span');
+                new_element1.textContent =UserName+"は"+ccc+"のペナルティを"+"["+target_another+"]により"+after+"に変更しました"+"///"+today;
+                // 指定した要素の後に挿入
+                let br=document.createElement("br");
+                lll.appendChild(new_element1);
+                new_element1.after(br);
+
+            }else{
+                
+
+                // 新しいHTML要素を作成
+                let new_element1 = document.createElement('span');
+                let br=document.createElement("br");
+                new_element1.textContent =UserName+"は"+ccc+"のペナルティを"+"["+target_reason+"]により"+after+"に変更しました"+"///"+today;
+                // 指定した要素の後に挿入
+                lll.appendChild(new_element1);
+                new_element1.after(br);
+                
+            }
+
+        }
+    }else{
+        window.alert("ログインしてください");
+        window.location.href = 'file:///C:/Users/manato/Documents/%E5%B8%AD%E6%9B%BF%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC/%E9%81%85%E5%88%BB%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0.html'; 
+    }
+    }
+ function back(){
+    document.getElementById("log-display").style.display="none";
+ }
+ function go_log(){
+    document.getElementById("log-display").style.display="flex";
+ }
+
+ var urlParam = location.search.substring(1);
+ 
+ //ここからセキュリティについて
+ 
+// URLにパラメータが存在する場合
+if(urlParam) {
+  // 「&」が含まれている場合は「&」で分割
+  var param = urlParam.split('&');
+ 
+  // パラメータを格納する用の配列を用意
+  var paramArray = [];
+ 
+  // 用意した配列にパラメータを格納
+  for (i = 0; i < param.length; i++) {
+    var paramItem = param[i].split('=');
+    paramArray[paramItem[0]] = paramItem[1];
+  }
+ 
+  // パラメータ
+  console.log(paramArray)
+  if (paramArray.login == 'Yes') {
+    login="Yes";
+    console.log("Yes")
+  } else {
+    console.log("No")
+  }
+}
+let target_User=paramArray.UserName;
+ if(Users.includes(target_User)){
+    UserName=target_User;
+    User="Yes";
+    console.log(UserName)
+    
+
+ }
+ 
+    
+ 
+  </script>
+  
+  </html>
